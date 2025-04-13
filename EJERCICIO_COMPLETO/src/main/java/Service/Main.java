@@ -11,12 +11,12 @@ public class Main {
     }
 
     private static void crearCuentasAleatorias() {
-        LogicaCuenta logica = LogicaCuenta.getInstance(); // Obtener Singleton
+        LogicaCuenta logica = LogicaCuenta.getInstance();
         Random random = new Random();
 
         for (int i = 0; i < 5; i++) {
-            logica.agregarCuenta(new CajaDeAhorro()); // Agregar CajaDeAhorro
-            logica.agregarCuenta(new CuentaCorriente(500 + random.nextDouble() * 500)); // Agregar CuentaCorriente
+            logica.agregarCuenta(new CajaDeAhorro());
+            logica.agregarCuenta(new CuentaCorriente(500 + random.nextDouble() * 500));
         }
         System.out.println("Se han creado 10 cuentas aleatorias (5 CajaDeAhorro y 5 CuentaCorriente).");
     }
